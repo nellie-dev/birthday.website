@@ -43,3 +43,11 @@ if (document.getElementById('submitBtn')) {
   document.getElementById('submitBtn').addEventListener('click', submitChoice);
 }
 
+document.addEventListener('contextmenu', event => event.preventDefault());
+document.addEventListener('keydown', function(e) {
+  if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
+    e.preventDefault();
+  }
+});
+
+
